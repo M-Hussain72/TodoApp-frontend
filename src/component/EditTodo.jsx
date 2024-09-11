@@ -19,7 +19,7 @@ export default function EditTodo({ value, id, handelModalClose, setRender }) {
     e.preventDefault();
     setLoading(true);
     await axios
-      .put(`http://localhost:5555/todo/${id}`, { note: note })
+      .put(`https://todo-web-backend-29t7.onrender.com/todo/${id}`, { note: note })
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Todo Update successfully', { variant: 'success' });
