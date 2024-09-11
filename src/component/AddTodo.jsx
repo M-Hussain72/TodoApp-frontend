@@ -14,7 +14,7 @@ export default function AddTodo({ handelModalClose, setRender }) {
     e.preventDefault();
     setLoading(true);
     await axios
-      .post('http://localhost:5555/todo/', { note })
+      .post('https://todo-web-backend-29t7.onrender.com/todo/', { note })
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Created successfully', { variant: 'success' });
