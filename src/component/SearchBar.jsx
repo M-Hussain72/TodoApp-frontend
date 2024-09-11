@@ -13,7 +13,7 @@ export default function SearchBar() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       axios
-        .get(`http://localhost:5555/todo/${value}`)
+        .get(`https://todo-web-backend-29t7.onrender.com/todo/${value}`)
         .then((response) => {
           setTodoList(response.data.data);
         })
