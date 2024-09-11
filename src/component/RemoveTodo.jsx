@@ -7,7 +7,7 @@ export default function RemoveTodo({ id, handelModalClose, setRender }) {
   async function handleDeleteBtn() {
     setLoading(true);
     await axios
-      .delete(`http://localhost:5555/todo/${id}`)
+      .delete(`https://todo-web-backend-29t7.onrender.com/todo/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar(' Deleted successfully!', { variant: 'success' });
