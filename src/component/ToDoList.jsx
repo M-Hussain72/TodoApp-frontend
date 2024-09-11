@@ -34,7 +34,7 @@ export default function ToDoList({ items }) {
       setSearch('');
       setLoading(true);
       axios
-        .put('http://localhost:5555/todo/', value)
+        .put('https://todo-web-backend-29t7.onrender.com/todo/', value)
         .then((response) => {
           setLoading(false);
           setTodoList(response.data.data);
@@ -53,7 +53,7 @@ export default function ToDoList({ items }) {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/todo/${search}`)
+      .get(`https://todo-web-backend-29t7.onrender.com/todo/${search}`)
       .then((response) => {
         setLoading(false);
         setTodoList(response.data.data);
