@@ -7,7 +7,6 @@ import DarkModeSwitch from './DarkModeSwitch';
 export default function Header() {
   const { setSelectTodo } = useContext(TodoContext);
   function handleChange(value) {
-    console.log(value);
     setSelectTodo(value);
   }
   return (
