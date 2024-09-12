@@ -9,6 +9,7 @@ export default function TODO({ item, openModal, setRender }) {
     const isComplete = {
       isComplete: checked,
     };
+    
     await axios
       .put(`https://todo-web-backend-29t7.onrender.com/todo/complete/${item._id}`, isComplete)
       .then()
