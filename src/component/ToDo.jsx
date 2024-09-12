@@ -10,7 +10,7 @@ export default function TODO({ item, openModal, setRender }) {
       isComplete: checked,
     };
     await axios
-      .put(`http://localhost:5555/todo/complete/${item._id}`, isComplete)
+      .put(`https://todo-web-backend-29t7.onrender.com/complete/${item._id}`, isComplete)
       .then()
       .catch((error) => {
         enqueueSnackbar('An error happened. please Check console', {
